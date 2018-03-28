@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="plugin/css/style.css">
 </head>
 <body>
 <script src="js/jquery-3.3.1.js"></script>
@@ -43,17 +44,17 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="images/timg.jpg" alt="First slide">
+            <img class="d-block w-100" src="images/10.jpg" alt="First slide">
             <div class="container">
                 <div class="carousel-caption text-left">
-                    <h1>Example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    <h1>版本内容</h1>
+                    <p>增加女神枪手四个职业</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">查看详情</a></p>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="images/timg.jpg" alt="Second slide">
+            <img class="d-block w-100" src="images/11.jpg" alt="Second slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Another example headline.</h1>
@@ -63,7 +64,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="images/timg.jpg" alt="Third slide">
+            <img class="d-block w-100" src="images/12.jpg" alt="Third slide">
             <div class="container">
                 <div class="carousel-caption text-right">
                     <h1>One more for good measure.</h1>
@@ -118,7 +119,7 @@
             <p class="lead" style="font-weight: 400;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/timg.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/hongyan.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
         </div>
     </div>
 
@@ -130,7 +131,7 @@
             <p class="lead" style="font-weight: 400;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/timg.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/baishou.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
         </div>
     </div>
 
@@ -142,20 +143,122 @@
             <p class="lead" style="font-weight: 400;">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/timg.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="images/xiazi.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
         </div>
     </div>
 
     <hr class="featurette-divider">
 
     <!-- /END THE FEATURETTES -->
-
 </div>
-
-
+<div class="count-particles">
+    <span class="js-count-particles">--</span> particles
+</div>
+<div id="particles-js"></div>
+<div id="main" style="width: 600px;height:400px;"></div>
 <footer class="container">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>© 2017-2018 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
 </footer>
+
+<script src="js/echarts.min.js"></script>
+<script src="plugin/js/particles.min.js"></script>
+<script src="plugin/js/stats.js"></script>
+<script src="plugin/js/app.js"></script>
+<script type="text/javascript">
+
+    var count_particles, stats, update;
+//    stats = new Stats;
+//    stats.setMode(0);
+//    stats.domElement.style.position = 'absolute';
+//    stats.domElement.style.left = '0px';
+//    stats.domElement.style.top = '0px';
+//    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+//        stats.begin();
+//        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+
+    var myChart = echarts.init(document.getElementById('main'));
+option = {
+    backgroundColor: '#2c343c',
+
+    title: {
+        text: 'Customized Pie',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '50%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:274, name:'联盟广告'},
+                {value:235, name:'视频广告'},
+                {value:400, name:'搜索引擎'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+</script>
 </body>
 </html>
