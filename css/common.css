@@ -1,0 +1,123 @@
+a,a:focus, a:hover {
+	outline:none;
+}
+
+/*----------------------------------------------------------------+
+                              公共样式
++----------------------------------------------------------------*/
+.navbar {
+	margin-bottom: 0;
+	min-height: 80px;
+}
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-brand {
+	padding-top: 30px;
+	padding-left: 120px;
+	width: 200px;
+	font-size: 30px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle {
+     border-color: #fff;
+}
+.open .icon-bar:nth-child(2) {
+	display: none;
+}
+.open .icon-bar:nth-child(3) {
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+}
+.open .icon-bar:nth-child(4) {
+	position: relative;
+	top: -6px;
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-o-transform:rotate(-45deg);
+}
+.navbar-nav>li>a.current,
+.navbar-nav>li>a.current:hover {
+	color: #25b9f5;
+}
+
+.nav>li>a {
+	padding: 30px 30px 10px 30px;
+	font-size: 16px;
+}
+.navbar-nav>li>a>span:first-child {
+	z-index: 2;
+	display: block;
+}
+
+.navbar-nav>li>a>span:last-child {
+	z-index: 1;
+	display: block;
+	color: #999;
+	font: 12px Georgia, serif;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+	text-align: center
+}
+
+.navbar-nav>li>a:hover>span:last-child,
+.navbar-nav>li>a:focus>span:last-child {
+	opacity: 1;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	transform: translateY(0%);
+}
+.footer {
+	width: 100%;
+	color: #999;
+	text-align: center;
+}
+.page-home .footer,
+.page-about .footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1030;
+	color: #ccc;
+}
+
+@media only screen and (max-width: 767px) {
+	.navbar {
+		min-height: 40px;
+	}
+	.navbar-brand {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+	.navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.nav>li {
+		padding-left: 10px;
+		border-bottom: 1px solid #e2e2e2;
+	}
+	.nav>li>a {
+		padding: 10px;
+	}
+	.navbar-nav>li>a>span.en {
+		display: none;
+	}
+}
+
+.js .animate-box {
+  opacity: 0;
+}

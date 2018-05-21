@@ -1,0 +1,356 @@
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	padding-top: 200px;
+}
+
+.subheader {
+	margin-bottom: 40px;
+	padding-bottom: 10px;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+.myphoto {
+	margin-bottom: 20px;
+	opacity: .5;
+}
+.myphoto:hover {
+	opacity: 1;
+	-webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+.basicinfo {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.table-info {
+	margin-top: 40px;
+}
+
+.table-info tr {
+	height: 35px;
+}
+
+.table-info td {
+	padding-right: 15px;
+}
+
+.table-info td.break {
+	font-weight: bold;
+}
+
+.table-info .glyphicon {
+	margin-right: 5px;
+}
+
+
+/*---------------- avatar ----------------*/
+
+.avatar {
+	margin: 0 auto;
+	-webkit-perspective: 900px;
+	-moz-perspective: 900px;
+	perspective: 900px;
+}
+
+.avatar .img {
+	z-index: 11;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.avatar .info {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.avatar .info .info-back {
+	opacity: 1;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	background: #333;
+}
+
+.avatar .info p {
+	padding-top: 45px;
+	padding-left: 0px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.avatar.bottom-to-top .img {
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	-ms-transform-origin: 50% 0;
+	-o-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.avatar.bottom-to-top a:hover .img {
+	-webkit-transform: rotate3d(1, 0, 0, 180deg);
+	-moz-transform: rotate3d(1, 0, 0, 180deg);
+	-ms-transform: rotate3d(1, 0, 0, 180deg);
+	-o-transform: rotate3d(1, 0, 0, 180deg);
+	transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.avatar.top-to-bottom .img {
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+.avatar.top-to-bottom a:hover .img {
+	-webkit-transform: rotate3d(1, 0, 0, -180deg);
+	-moz-transform: rotate3d(1, 0, 0, -180deg);
+	-ms-transform: rotate3d(1, 0, 0, -180deg);
+	-o-transform: rotate3d(1, 0, 0, -180deg);
+	transform: rotate3d(1, 0, 0, -180deg);
+}
+
+.avatar.left-to-right .img {
+	-webkit-transform-origin: 100% 50%;
+	-moz-transform-origin: 100% 50%;
+	-ms-transform-origin: 100% 50%;
+	-o-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+}
+
+.avatar.left-to-right a:hover .img {
+	-webkit-transform: rotate3d(0, 1, 0, 180deg);
+	-moz-transform: rotate3d(0, 1, 0, 180deg);
+	-ms-transform: rotate3d(0, 1, 0, 180deg);
+	-o-transform: rotate3d(0, 1, 0, 180deg);
+	transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.avatar.right-to-left .img {
+	-webkit-transform-origin: 0% 50%;
+	-moz-transform-origin: 0% 50%;
+	-ms-transform-origin: 0% 50%;
+	-o-transform-origin: 0% 50%;
+	transform-origin: 0% 50%;
+}
+
+.avatar.right-to-left a:hover .img {
+	-webkit-transform: rotate3d(0, 1, 0, -180deg);
+	-moz-transform: rotate3d(0, 1, 0, -180deg);
+	-ms-transform: rotate3d(0, 1, 0, -180deg);
+	-o-transform: rotate3d(0, 1, 0, -180deg);
+	transform: rotate3d(0, 1, 0, -180deg);
+}
+
+.avatar a {
+	color: #333;
+}
+
+.avatar a:hover {
+	text-decoration: none;
+}
+
+.avatar img {
+	width: 100%;
+	height: 100%;
+}
+
+.avatar {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.avatar .img {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.avatar .img:before {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	-webkit-transition: all 0.35s ease-in-out;
+	-moz-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+}
+
+.avatar .img img {
+	border-radius: 50%;
+}
+
+.avatar .info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+/*---------------- works ----------------*/
+.works-company {
+	margin-bottom: 30px;
+}
+.works-company p {
+	padding-left: 15px;
+}
+
+
+/*---------------- skills ----------------*/
+.skills-list li {
+	margin-bottom: 10px;
+	list-style-type: none;
+}
+
+.skillst {
+	margin-top: 30px;
+	padding: 0 20px;
+}
+
+.skillst .skillbar {
+	width: 100%;
+	height: 10px;
+	position: relative;
+	margin-bottom: 60px;
+	padding: 2px;
+	box-sizing: border-box;
+}
+
+.skillst .count-bar {
+	opacity: .8;
+	width: 100%;
+	height: 5px;
+	width: 0px;
+	position: relative;
+	background-color: #25b9f5;
+}
+
+.skillst .count-bar span {
+	font-size: 12px;
+}
+
+.skillst .title {
+	position: absolute;
+	line-height: 25px;
+	top: -35px;
+	left: 0;
+	font-size: 12px !important;
+}
+
+.skillst .count-bar .count {
+	position: absolute;
+	line-height: 18px;
+	top: -28px;
+	right: -20px;
+	color: #fff;
+	text-align: center;
+	background-color: #818181;
+}
+
+.skillst .count-bar .count span {
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 18px;
+}
+
+.skillst .count-bar .count span:after {
+	position: absolute;
+	left: 50%;
+	margin-left: -4px;
+	top: 18px;
+	content: "";
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+}
+
+.skillst .count-bar .count span:after {
+	border-top: 4px solid #818181;
+}
+@media only screen and (max-width: 1366px) {
+	.swiper-slide {
+		padding-top: 110px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.swiper-container {
+		height: 94%;
+	}
+	.swiper-slide {
+		padding-top: 50px;
+	}
+	.subheader {
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+	.table-info {
+		margin-top: 0;
+	}
+	.table-info tr {
+		height: 30px;
+	}
+	.skills .skills-list {
+		display: none;
+	}
+	.skillst {
+		padding: 0;
+	}
+	.myphoto {
+		margin-bottom: 10px;
+		width: 80%;
+	}
+	.avatar {
+		display: none;
+	}
+	.footer p {
+		margin-bottom: 5px;
+	}
+}
+
+.download-resume {
+	opacity: .8;
+	display: block;
+	width: 200px;
+	background-color: #25b9f5;
+    color: #fff;
+    border: 2px solid #25b9f5;
+    border-radius: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.download-resume:hover {
+	opacity: 1;
+	background-color: #25b9f5;
+	border: 2px solid #25b9f5;
+}
+.swiper-pagination-bullet-active {
+	background: #25b9f5;
+}
