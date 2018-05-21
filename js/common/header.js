@@ -32,7 +32,7 @@ let header =
 	            	</a>
 	            </li>
 	            <li>
-	            	<a href="life.html" class="life">
+	            	<a href="notes.html" class="life">
 	            		<span>学习笔记</span>
 	            		<span class="en">Notes</span>
 	            	</a>
