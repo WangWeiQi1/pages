@@ -33,8 +33,8 @@ let header =
 	            </li>
 	            <li>
 	            	<a href="notes.html" class="notes">
-	            		<span>学习笔记</span>
-	            		<span class="en">Notes</span>
+	            		<span>心灵鸡汤</span>
+	            		<span class="en">Soul Soup</span>
 	            	</a>
 	            </li>
 	        </ul>

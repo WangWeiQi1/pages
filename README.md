@@ -1,2 +1,4 @@
-# ciel
-由自己设计并运用 h5,css3,bootstrap和jquery搭建的个人主页，自适应pc端和移动端。
+由自己设计
+运用 h5,css3,
+bootstrap框架和jquery插件
+搭建的个人主页，自适应pc端和移动端。
