@@ -23,6 +23,10 @@ body {
 	margin-bottom: 20px;
 	opacity: .5;
 }
+.myphoto .img-responsive{
+	width: 180px;
+	height: 250px;
+}
 .myphoto:hover {
 	opacity: 1;
 	-webkit-transition: 1s;
@@ -55,164 +59,6 @@ body {
 	margin-right: 5px;
 }
 
-
-/*---------------- avatar ----------------*/
-
-.avatar {
-	margin: 0 auto;
-	-webkit-perspective: 900px;
-	-moz-perspective: 900px;
-	perspective: 900px;
-}
-
-.avatar .img {
-	z-index: 11;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
-.avatar .info {
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-
-.avatar .info .info-back {
-	opacity: 1;
-	border-radius: 50%;
-	width: 100%;
-	height: 100%;
-	background: #333;
-}
-
-.avatar .info p {
-	padding-top: 45px;
-	padding-left: 0px;
-	font-size: 14px;
-	color: #fff;
-}
-
-.avatar.bottom-to-top .img {
-	-webkit-transform-origin: 50% 0;
-	-moz-transform-origin: 50% 0;
-	-ms-transform-origin: 50% 0;
-	-o-transform-origin: 50% 0;
-	transform-origin: 50% 0;
-}
-
-.avatar.bottom-to-top a:hover .img {
-	-webkit-transform: rotate3d(1, 0, 0, 180deg);
-	-moz-transform: rotate3d(1, 0, 0, 180deg);
-	-ms-transform: rotate3d(1, 0, 0, 180deg);
-	-o-transform: rotate3d(1, 0, 0, 180deg);
-	transform: rotate3d(1, 0, 0, 180deg);
-}
-
-.avatar.top-to-bottom .img {
-	-webkit-transform-origin: 50% 100%;
-	-moz-transform-origin: 50% 100%;
-	-ms-transform-origin: 50% 100%;
-	-o-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
-}
-
-.avatar.top-to-bottom a:hover .img {
-	-webkit-transform: rotate3d(1, 0, 0, -180deg);
-	-moz-transform: rotate3d(1, 0, 0, -180deg);
-	-ms-transform: rotate3d(1, 0, 0, -180deg);
-	-o-transform: rotate3d(1, 0, 0, -180deg);
-	transform: rotate3d(1, 0, 0, -180deg);
-}
-
-.avatar.left-to-right .img {
-	-webkit-transform-origin: 100% 50%;
-	-moz-transform-origin: 100% 50%;
-	-ms-transform-origin: 100% 50%;
-	-o-transform-origin: 100% 50%;
-	transform-origin: 100% 50%;
-}
-
-.avatar.left-to-right a:hover .img {
-	-webkit-transform: rotate3d(0, 1, 0, 180deg);
-	-moz-transform: rotate3d(0, 1, 0, 180deg);
-	-ms-transform: rotate3d(0, 1, 0, 180deg);
-	-o-transform: rotate3d(0, 1, 0, 180deg);
-	transform: rotate3d(0, 1, 0, 180deg);
-}
-
-.avatar.right-to-left .img {
-	-webkit-transform-origin: 0% 50%;
-	-moz-transform-origin: 0% 50%;
-	-ms-transform-origin: 0% 50%;
-	-o-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
-}
-
-.avatar.right-to-left a:hover .img {
-	-webkit-transform: rotate3d(0, 1, 0, -180deg);
-	-moz-transform: rotate3d(0, 1, 0, -180deg);
-	-ms-transform: rotate3d(0, 1, 0, -180deg);
-	-o-transform: rotate3d(0, 1, 0, -180deg);
-	transform: rotate3d(0, 1, 0, -180deg);
-}
-
-.avatar a {
-	color: #333;
-}
-
-.avatar a:hover {
-	text-decoration: none;
-}
-
-.avatar img {
-	width: 100%;
-	height: 100%;
-}
-
-.avatar {
-	position: relative;
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-}
-
-.avatar .img {
-	position: relative;
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-}
-
-.avatar .img:before {
-	position: absolute;
-	display: block;
-	content: '';
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	-webkit-transition: all 0.35s ease-in-out;
-	-moz-transition: all 0.35s ease-in-out;
-	transition: all 0.35s ease-in-out;
-}
-
-.avatar .img img {
-	border-radius: 50%;
-}
-
-.avatar .info {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	border-radius: 50%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
 /*---------------- works ----------------*/
 .works-company {
 	margin-bottom: 30px;
@@ -307,8 +153,12 @@ body {
 		padding-top: 50px;
 	}
 	.subheader {
+		margin-top:50px;
 		margin-bottom: 10px;
 		font-size: 18px;
+	}
+	.col-md-6 .jiaoyu{
+		padding-top:5px;
 	}
 	.table-info {
 		margin-top: 0;
@@ -326,31 +176,11 @@ body {
 		margin-bottom: 10px;
 		width: 80%;
 	}
-	.avatar {
-		display: none;
+	.container .jineng{
+		padding-top:115px;
 	}
-	.footer p {
-		margin-bottom: 5px;
+	.col-md-6 .works h4{
+		font-size:14px;
 	}
 }
 
-.download-resume {
-	opacity: .8;
-	display: block;
-	width: 200px;
-	background-color: #25b9f5;
-    color: #fff;
-    border: 2px solid #25b9f5;
-    border-radius: 0;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-}
-.download-resume:hover {
-	opacity: 1;
-	background-color: #25b9f5;
-	border: 2px solid #25b9f5;
-}
-.swiper-pagination-bullet-active {
-	background: #25b9f5;
-}
