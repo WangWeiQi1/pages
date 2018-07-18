@@ -1,32 +1,11 @@
 .row {
 	padding-top: 120px;
 }
-.row.portfolio-image {
-	padding-top: 40px;
-}
-::-webkit-selection {
-  color: #fff;
-  background: #25b9f5;
-}
-
-::-moz-selection {
-  color: #fff;
-  background: #25b9f5;
-}
-
-::selection {
-  color: #fff;
-  background: #25b9f5;
-}
-
 
 
 /*---------- wrap-card -----------*/
 .wrap-card {
   position: relative;
-  box-shadow: 0px 0px 0px #818181;
-  transition: all 0.2s ease 0s;
-  -webkit-transform: translateY(0px) translateX(0px);
 }
 .wrap-card:before,
 .wrap-card:after {
@@ -108,6 +87,22 @@ hr {
 		margin-top: 0;
 		font-size: 22px;
 	}
+}
+.wrap-card .card .title{
+    text-align: center;
+    font-size:20px;
+    margin-bottom: 20px;
+}
+.wrap-card .card .con{
+    word-wrap:break-word;
+    /*word-break:break-all;*/
+    white-space: pre-wrap;
+    text-align:justify;
+}
+.wrap-card .card .date{
+    position: relative;
+    left:74%;
+    margin-top: 25px;
 }
 
 

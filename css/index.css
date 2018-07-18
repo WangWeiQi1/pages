@@ -266,9 +266,9 @@ h1 {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-.typed-cursor{
-	opacity: 0;
-}
+/*.typed-cursor{*/
+	/*opacity: 0;*/
+/*}*/
 @media screen and (max-width: 767px) {
 	.texts {
 	    margin-top: 100px;

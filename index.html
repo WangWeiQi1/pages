@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/dialog.css">
 	<!--[if lt IE 9]>
 		<script src="js/plugin/html5shiv.min.js"></script>
 	<![endif]-->
@@ -19,29 +20,48 @@
 
 <body class="page-home">
 	<!--顶部导航-->
-	<header class="header"></header>
-
+	<!--<headers class="header"></headers>-->
+	<div class="aa"></div>
 	<!--背景图-->
 	<div class="bg"></div>
 
 	<!--主要内容-->
+
 	<div class="info">
 		<div class="container">
 			<ul class="texts">
 		      <p>GOOD GOOD STUDY</p>
 		      <p>DAY DAY UP</p>
 		      <p>努力吧，少年！</p>
-		   </ul>
+		    </ul>
 
 		    <div class="hero-content">
 				<h1>努力！奋斗！</h1>
 				<br>
 				<span class="typed"></span>
-			  </div>
+			</div>
+
+			<div class="dialog-container">
+				<div class="dialog-mask"></div>
+				<div class="dialog-box">
+					<div class="dialog-title">
+						<div class="dialog-title-item">管理员登录界面</div>
+						<div class="dialog-title-close">[X]</div>
+					</div>
+					<div class="dialog-content">
+						<div class="form">
+							账号:<input type="text" class="account"><br>
+							密码:<input type="password" class="pass"><br>
+							<input type="button" id="btn" value="登录">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<!--Javascript-->
+	<script type="text/javascript" src="js/config.js"></script>
 	<script type="text/javascript" src="js/plugin/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/plugin/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/plugin/typed.js"></script>
@@ -49,6 +69,7 @@
 	<script type="text/javascript" src="js/common/footer.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script>
+		console.log('domain', domain)
 	    $(function () {
 			//typed js
 		    $(".typed").typed({
@@ -56,10 +77,43 @@
 		        typeSpeed: 100,
 		        backDelay: 900,
 		        // loop
-		        loop: false
+		        loop: false,
+				showCursor:false
 		    });
 
 	    });
+		$('.dialog-title-close').on('click',function () {
+			$('.dialog-container').hide();
+        })
+
+		console.log('test:', $('.aa').html(header));
+//		console.log('test:', $('.aa').text(header));
+        $('.navbar-brand').on('click',function () {
+			$('.dialog-container').show();
+        })
+
+		$('#btn').on('click',function () {
+			console.log('111:',$('.account').val());
+			console.log('222:',$('.pass').val());
+			$.ajax({
+//                url:'http://localhost/mypage/index.php/admin/login',
+                url:`${domain}/mypage/index.php/admin/login`,
+				type:'POST',
+				data:{
+				    name:$('.account').val(),
+					pass:$('.pass').val()
+				},
+				success:function(data){
+			        console.log('状态:',data);
+			        if(data == '登录成功'){
+			            alert('登录成功，即将进入管理员界面');
+			           window.location.href = 'admin.html';
+					}else{
+			            alert('登录失败,请检查用户名和密码');
+					}
+			    }
+			})
+        })
 	</script>
 </body>
 </html>

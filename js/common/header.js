@@ -8,7 +8,7 @@ let header =
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	        </button>
-	        <a class="navbar-brand" href="index.html">WWQ</a>
+	        <p class="navbar-brand">WWQ</p>
 	    </div>
 
 	    <div class="navbar-collapse collapse">
@@ -32,12 +32,14 @@ let header =
 	            	</a>
 	            </li>
 	            <li>
-	            	<a href="soulsoup.html" class="soulsoup">
-	            		<span>心灵鸡汤</span>
-	            		<span class="en">Soul Soup</span>
+	            	<a href="notes.html" class="notes">
+	            		<span>学习笔记</span>
+	            		<span class="en">Notes</span>
 	            	</a>
 	            </li>
 	        </ul>
 	    </div>
 	</div>
 </nav>`;
+
+

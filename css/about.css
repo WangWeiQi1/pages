@@ -30,8 +30,8 @@ body {
 .myphoto:hover {
 	opacity: 1;
 	-webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
 }
 
 .basicinfo {
@@ -182,5 +182,8 @@ body {
 	.col-md-6 .works h4{
 		font-size:14px;
 	}
+}
+.js .animate-box {
+	opacity: 0;
 }
 

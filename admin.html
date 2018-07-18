@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="form_add">
+        <p class="warn">welcome</p>
+        <input type="text" class="form-control title" placeholder="请输入笔记标题">
+        <textarea class="form-control content" rows="10" placeholder="请输入笔记内容"></textarea>
+        <p id="submit">发表笔记</p>
+    </div>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/plugin/jquery-3.3.1.js"></script>
+    <script>
+        $('#submit').on('click',function () {
+            console.log('test1:',$('.title').val());
+            console.log('test2:',$('.content').val());
+
+            $.ajax({
+//                url:'http://localhost/mypage/index.php/admin/add_note',
+                url:`${domain}/mypage/index.php/admin/add_note`,
+
+                type:'POST',
+                data:{
+                    title:$('.title').val(),
+                    content:$('.content').val()
+                },
+                success:function (data) {
+                    console.log('状态:',data);
+                    if(data == '发表成功'){
+                        var r = confirm('发表成功,是否继续发表？');
+                        if(r == true){
+                            window.location.href = 'admin.html';
+                        }else{
+                            window.location.href = 'index.html';
+                        }
+                    }else{
+                        alert('发表失败,请重试!');
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>学习笔记</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta name="author" content="wangweiqi">
+		<meta name="keywords" content="WWQ 的个人主页">
+		<meta name="description" content="WWQ 的个人主页">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/notes.css">
+		<script src="js/plugin/modernizr-2.6.2.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="js/plugin/html5shiv.min.js"></script>
+			<script src="js/plugin/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--顶部导航-->
+		<header class="header"></header>
+
+		<div class="container">
+			<div class="row">
+				<!--<div class="col-md-6 col-sm-6 animate-box" data-animate-effect="fadeInLeft">-->
+					<!--<div class="wrap-card">-->
+						<!--<div class="card">-->
+							<!--<div class="text-detail">-->
+								<!--<h3 class="title"></h3>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			</div>
+		</div>
+
+
+		<!-- Javascript -->
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/plugin/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="js/plugin/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/plugin/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/plugin/jquery.waypoints.min.js"></script>
+		<script type="text/javascript" src="js/common/header.js"></script>
+		<script type="text/javascript" src="js/common/footer.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript">
+
+			const template = (content) => {
+			    console.log('content', content)
+			    const t = `
+				<div class="col-md-6 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+					<div class="wrap-card">
+						<div class="card">
+							<div class="text-detail">
+								<h5 class="title">${content.note_title}</h5>
+								<p class="con">${content.note_content}</p>
+								<p class="date">${content.note_time}</p>
+							</div>
+						</div>
+					</div>
+				</div>`;
+				return t
+			}
+
+
+			const main_template = (lista) => {
+			    var strs = '';
+                for (var i = 0; i < lista.length; i++) {
+					const ceil = template(lista[i])
+					strs += ceil
+                }
+                return strs;
+
+			}
+
+
+			$(function() {
+				contentWayPoint();
+			});
+			$.ajax({
+//                url:'http://localhost/mypage/index.php/admin/show',
+                url:`${domain}/mypage/index.php/admin/show`,
+				type:'GET',
+				dataType: 'json',
+				success:function (res) {
+					console.log('状态:', );
+					const list = main_template(res);
+//                    $('.test_row').html(content)
+//                    console.log(content)
+                    console.log('dom', $('.row').html(list));
+                }
+			})
+		</script>
+	</body>
+</html>
